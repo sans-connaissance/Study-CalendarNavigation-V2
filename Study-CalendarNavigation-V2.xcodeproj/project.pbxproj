@@ -13,6 +13,7 @@
 		41F49DD8285171B4007F54B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F49DD7285171B4007F54B7 /* Preview Assets.xcassets */; };
 		41F49DDF2851817B007F54B7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F49DDE2851817B007F54B7 /* Day.swift */; };
 		41F49DE128518363007F54B7 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F49DE028518363007F54B7 /* DayView.swift */; };
+		41F49DE3285187E3007F54B7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F49DE2285187E3007F54B7 /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		41F49DD7285171B4007F54B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41F49DDE2851817B007F54B7 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		41F49DE028518363007F54B7 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		41F49DE2285187E3007F54B7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				41F49DDE2851817B007F54B7 /* Day.swift */,
 				41F49DE028518363007F54B7 /* DayView.swift */,
+				41F49DE2285187E3007F54B7 /* CalendarViewModel.swift */,
 				41F49DD0285171B2007F54B7 /* Study_CalendarNavigation_V2App.swift */,
 				41F49DD2285171B2007F54B7 /* ContentView.swift */,
 				41F49DD4285171B4007F54B7 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				41F49DE128518363007F54B7 /* DayView.swift in Sources */,
 				41F49DD1285171B2007F54B7 /* Study_CalendarNavigation_V2App.swift in Sources */,
 				41F49DDF2851817B007F54B7 /* Day.swift in Sources */,
+				41F49DE3285187E3007F54B7 /* CalendarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

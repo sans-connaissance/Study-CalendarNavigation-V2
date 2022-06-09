@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm = CalendarViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        VStack {
+            HStack(alignment: .center) {
+                Text("S")
+                Text("M")
+                Text("T")
+                Text("W")
+                Text("T")
+                Text("F")
+                Text("Su")
+            }
+            
+            DayView(day: Day.example)
+            Spacer()
+        }
+        
     }
 }
 
