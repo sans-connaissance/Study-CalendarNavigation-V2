@@ -9,26 +9,33 @@ import SwiftUI
 
 struct TabViewView: View {
     
+    private let numbers = 1...100
     private let colors: [Color] = [.red, .blue, .green, .black]
+    @State private var selectedTab = 5
     
     var body: some View {
         VStack {
-            TabView {
-                ForEach(colors, id: \.self) { color in
-                    ZStack {
-                        color
+            TabView(selection: $selectedTab) {
+                ForEach(numbers, id: \.self) { color in
+//                    ZStack {
+                      //  color
+                    VStack {
                         Text("\(color.description)")
                             .font(.title)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
+                            
+//                    }
                     }
-                    
+                    .tag(color)
+                    .frame(width: 300, height: 1000, alignment: .center)
+                    .background(.blue)
                 }
             
             }
-            .tabViewStyle(.page)
-           // .tabViewStyle(.page(indexDisplayMode: .never))
-            .indexViewStyle(.page(backgroundDisplayMode: .interactive))
-            //.indexViewStyle(.page(backgroundDisplayMode: .never))
+           // .tabViewStyle(.page)
+            .tabViewStyle(.page(indexDisplayMode: .never))
+           // .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+            .indexViewStyle(.page(backgroundDisplayMode: .never))
         }
     }
 }
