@@ -53,11 +53,10 @@ struct TabViewView: View {
                 }
                 
             }
-            .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
-            .tabViewStyle(.page)
-            // .tabViewStyle(.page(indexDisplayMode: .never))
+           // .tabViewStyle(.page)
+             .tabViewStyle(.page(indexDisplayMode: .never))
             // .indexViewStyle(.page(backgroundDisplayMode: .interactive))
-            .indexViewStyle(.page(backgroundDisplayMode: .never))
+          //  .indexViewStyle(.page(backgroundDisplayMode: .never))
         }
     }
 }

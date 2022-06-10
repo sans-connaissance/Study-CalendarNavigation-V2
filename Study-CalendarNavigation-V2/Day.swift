@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Day {
+struct Day: Hashable {
     let date: Int
     let hours: [Int]
     

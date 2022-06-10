@@ -11,23 +11,53 @@ struct ContentView: View {
     
     @StateObject var vm = CalendarViewModel()
     //the answer https://www.youtube.com/watch?v=zzqKhitBQfM
+    
+    @State private var selectedTab = 1
+    @State private var previouslySelectedTab = 1
+    
     var body: some View {
-        
         VStack {
-            HStack(alignment: .center) {
-                Text("S")
-                Text("M")
-                Text("T")
-                Text("W")
-                Text("T")
-                Text("F")
-                Text("Su")
+            HStack {
+                Button {
+                    withAnimation {
+                        previouslySelectedTab = selectedTab
+                        selectedTab -= 1
+                    }
+                } label: {
+                    Text("Minus One")
+                }
+                
+                Button {
+                    withAnimation {
+                        previouslySelectedTab = selectedTab
+                        selectedTab += 1
+                    }
+                } label: {
+                    Text("Plus One")
+                }
+                
             }
-            
-            DayView(day: Day.example)
-            Spacer()
+            TabView(selection: $selectedTab) {
+                ForEach(vm.dayDates, id: \.self) { day in
+                    //                    ZStack {
+                    //  color
+                   // VStack {
+                        
+                        DayView(day: day)
+                        //                    }
+                 //   }
+                    .tag(day.date)
+//                    .frame(width: 300, height: 1000, alignment: .center)
+//                    .background(.blue)
+                }
+                
+            }
+            .onAppear{vm.getDays()}
+           // .tabViewStyle(.page)
+             .tabViewStyle(.page(indexDisplayMode: .never))
+            // .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+          //  .indexViewStyle(.page(backgroundDisplayMode: .never))
         }
-        
     }
 }
 
