@@ -9,12 +9,26 @@ import SwiftUI
 
 struct TabViewView: View {
     
-    private let numbers = 1...100
+    private let numbers = 1...1000
     private let colors: [Color] = [.red, .blue, .green, .black]
     @State private var selectedTab = 5
     
     var body: some View {
         VStack {
+            HStack {
+                Button {
+                    selectedTab -= 1
+                } label: {
+                    Text("Minus One")
+                }
+                
+                Button {
+                    selectedTab += 1
+                } label: {
+                    Text("Plus One")
+                }
+
+            }
             TabView(selection: $selectedTab) {
                 ForEach(numbers, id: \.self) { color in
 //                    ZStack {
@@ -32,8 +46,8 @@ struct TabViewView: View {
                 }
             
             }
-           // .tabViewStyle(.page)
-            .tabViewStyle(.page(indexDisplayMode: .never))
+        .tabViewStyle(.page)
+           // .tabViewStyle(.page(indexDisplayMode: .never))
            // .indexViewStyle(.page(backgroundDisplayMode: .interactive))
             .indexViewStyle(.page(backgroundDisplayMode: .never))
         }
